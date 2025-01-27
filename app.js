@@ -7,8 +7,8 @@ let amigos = [];
 function AgregarAmigos() {
 
     //capturamos el valor de la entrada
-    let entrada = document.getElementById("amigo");
-    let nombre = entrada.value.trim();
+    const entrada = document.getElementById("amigo");
+    const nombre = entrada.value.trim();
 
     //validamos si la entrada esta vacia
     if (nombre === "") {
@@ -29,13 +29,13 @@ function AgregarAmigos() {
 //Crear la función Actualizar Lista de Amigos
 function ActualizarLista() {
     //obtener listaAmigos
-    let lista = document.getElementById("listaAmigos");
+    const lista = document.getElementById("listaAmigos");
     //limpiar lista antes de agregar nuevos elementos
     lista.innerHTML = "";
     //recorrer el array amigos
     for (let i = 0; i < amigos.length; i++) {
         //crear el elemnto <li>
-        let li = document.createElement("li");
+        const li = document.createElement("li");
         //asignar el nombre a li
         li.textContent = amigos[i];
         //agregar <li> a <ul>
@@ -52,12 +52,12 @@ function SortearAmigo() {
         return;
     }
     //generar numero aleatorio, multiplicarlo por la cantidad de elementos del array y redondearlo hacia abajo
-    let IndiceAleatorio = Math.floor(Math.random()*amigos.length);
+    const IndiceAleatorio = Math.floor(Math.random()*amigos.length);
     //obtener el nombre del amigo sorteado
-    let AmigoSorteado = amigos[IndiceAleatorio];
+    const AmigoSorteado = amigos[IndiceAleatorio];
 
     //obtener el <ul> donde se mostrará el resultado
-    let resultado = document.getElementById("resultado");
+    const resultado = document.getElementById("resultado");
     //insertar el resultado en un <li>
     resultado.innerHTML = `<li> El amigo secreto es: ${AmigoSorteado} </li>`;
 }
