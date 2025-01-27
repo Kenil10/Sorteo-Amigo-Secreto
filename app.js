@@ -4,11 +4,11 @@
 let amigos = [];
 
 //crear la función agregar amigos
-function AgregarAmigos() {
+function agregarAmigo() {
 
     //capturamos el valor de la entrada
-    const entrada = document.getElementById("amigo");
-    const nombre = entrada.value.trim();
+    const input = document.getElementById("amigo");
+    const nombre = input.value.trim();
 
     //validamos si la entrada esta vacia
     if (nombre === "") {
@@ -20,14 +20,14 @@ function AgregarAmigos() {
     amigos.push(nombre);
 
     //limpiamos el valor de la entrada colocando en blanco
-    entrada.value = "";
+    input.value = "";
 
     //Actualizar la Lista de Amigos
-    ActualizarLista();
+    actualizarLista();
 }
 
 //Crear la función Actualizar Lista de Amigos
-function ActualizarLista() {
+function actualizarLista() {
     //obtener listaAmigos
     const lista = document.getElementById("listaAmigos");
     //limpiar lista antes de agregar nuevos elementos
@@ -45,7 +45,7 @@ function ActualizarLista() {
 }
 
 //Crear la Función Sortear Amigo
-function SortearAmigo() {
+function sortearAmigo() {
     //validar si la lista de amigos no este vacia
     if (amigos.length === 0) {
         alert("No hay amigos en la lista para sortear");
