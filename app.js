@@ -13,7 +13,7 @@ function AgregarAmigos() {
     //validamos si la entrada esta vacia
     if (nombre === "") {
         alert("por favor, inserte un nombre");
-        return
+        return;
     }
 
     //ingresamos el nombre al array
