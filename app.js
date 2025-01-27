@@ -22,6 +22,26 @@ function AgregarAmigos() {
     //limpiamos el valor de la entrada colocando en blanco
     entrada.value = "";
 
+    //Actualizar la Lista de Amigos
+    ActualizarLista();
+}
+
+//Crear la función Actualizar Lista de Amigos
+function ActualizarLista() {
+    //obtener listaAmigos
+    let lista = document.getElementById("listaAmigos");
+    //limpiar lista antes de agregar nuevos elementos
+    lista.innerHTML = "";
+    //recorrer el array amigos
+    for (let i = 0; i < amigos.length; i++) {
+        //crear el elemnto <li>
+        let li = document.createElement("li");
+        //asignar el nombre a li
+        li.textContent = amigos[i];
+        //agregar <li> a <ul>
+        lista.appendChild(li);
+        
+    }
 }
 
 
